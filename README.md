@@ -2,7 +2,7 @@
 
 <!-- TITLE -->
 
-# 🏷️ Personal Portfolio Site
+# 🏷️ Game Industry Conference Site
 
 This is the capstone project in the first module in the **Microverse** program.
 <br/>
