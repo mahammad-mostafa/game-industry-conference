@@ -7,3 +7,11 @@
   font-family: regular;
   src: url(../fonts/lato-regular.woff2);
 }
+
+:root {
+  --accent-color: #ec5242;
+  --dark-color: #272a31;
+  --light-color: #d3d3d3;
+  --title-font: bold, serif;
+  --text-font: regular, serif;
+}
