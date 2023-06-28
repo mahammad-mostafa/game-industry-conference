@@ -12,6 +12,7 @@
   --accent-color: #ec5242;
   --light-color: #d3d3d3;
   --dark-color: #272a31;
+  --bright-color: #fff;
   --title-font: bold, serif;
   --text-font: regular, serif;
 }
@@ -29,7 +30,8 @@ h2,
 h3,
 ul,
 p,
-hr {
+hr,
+button {
   padding: 0;
   margin: 0;
 }
@@ -40,12 +42,23 @@ ul {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
   transition: all 0.1s ease;
 }
 
+button {
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
 .container {
   padding: 0 10px;
+}
+
+.visibility {
+  display: flex !important;
 }
 
 .accent-color {
@@ -60,6 +73,10 @@ a {
   color: var(--dark-color);
 }
 
+.bright-color {
+  color: var(--bright-color);
+}
+
 .accent-background {
   background-color: var(--accent-color);
 }
@@ -70,4 +87,75 @@ a {
 
 .dark-background {
   background-color: var(--dark-color);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  background-color: var(--bright-color);
+  box-shadow: 0 2px 4px var(--light-color);
+}
+
+.header-menu {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.header nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  inset-inline: 0;
+  display: none;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  color: var(--bright-color);
+  background-color: var(--dark-color);
+}
+
+.header-close {
+  order: 1;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 2rem;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-inline-end: 10px;
+}
+
+.header-social {
+  order: 1;
+  gap: 20px;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+
+.header-social li {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-links {
+  gap: 10px;
+  flex-direction: column;
+  font: 2rem var(--title-font);
+  margin: 15px 0;
+}
+
+.header-links li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.header-logo {
+  display: none;
 }
