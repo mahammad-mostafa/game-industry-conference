@@ -1,11 +1,11 @@
 @font-face {
   font-family: bold;
-  src: url(../fonts/lato-bold.woff2);
+  src: url(../fonts/bold.woff2);
 }
 
 @font-face {
   font-family: regular;
-  src: url(../fonts/lato-regular.woff2);
+  src: url(../fonts/regular.woff2);
 }
 
 :root {
@@ -20,7 +20,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font: 16px var(--text-font);
 }
 
 h1,
