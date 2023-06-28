@@ -10,8 +10,8 @@
 
 :root {
   --accent-color: #ec5242;
-  --dark-color: #272a31;
   --light-color: #d3d3d3;
+  --dark-color: #272a31;
   --title-font: bold, serif;
   --text-font: regular, serif;
 }
@@ -20,6 +20,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  color: var(--dark-color);
   font: 16px var(--text-font);
 }
 
@@ -41,4 +42,32 @@ ul {
 a {
   text-decoration: none;
   transition: all 0.1s ease;
+}
+
+.container {
+  padding: 0 10px;
+}
+
+.accent-color {
+  color: var(--accent-color);
+}
+
+.light-color {
+  color: var(--light-color);
+}
+
+.dark-color {
+  color: var(--dark-color);
+}
+
+.accent-background {
+  background-color: var(--accent-color);
+}
+
+.light-background {
+  background-color: var(--light-color);
+}
+
+.dark-background {
+  background-color: var(--dark-color);
 }
