@@ -13,7 +13,7 @@
   --light-color: #d3d3d3;
   --dark-color: #272a31;
   --bright-color: #fff;
-  --text-color: #555;
+  --text-color: #666;
   --title-font: bold, serif;
   --text-font: regular, serif;
 }
@@ -59,6 +59,12 @@ button {
   padding: 0 10px;
 }
 
+.line {
+  width: 50px;
+  border: 1px solid var(--accent-color);
+  margin: 10px auto;
+}
+
 .visibility {
   display: flex !important;
 }
@@ -96,7 +102,7 @@ button {
   top: 0;
   inset-inline: 0;
   background-color: var(--bright-color);
-  box-shadow: 0 2px 4px var(--light-color);
+  box-shadow: 0 0 3px var(--dark-color);
 }
 
 .header-menu {
@@ -137,7 +143,7 @@ button {
 
 .header-links li {
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.01);
 }
 
 .header-logo {
@@ -188,6 +194,7 @@ button {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  margin-top: 10px;
 }
 
 .hero p {
@@ -198,4 +205,51 @@ button {
 
 .hero time {
   font: 1.5rem var(--title-font);
+}
+
+.program {
+  padding: 50px 0;
+  background-position: center;
+  background-image: url(../images/pattern.png);
+}
+
+.program h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.program-list {
+  gap: 5px;
+  flex-direction: column;
+  margin: 40px 0;
+}
+
+.program-list li {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  align-items: center;
+  background-color: rgba(255,255,255,0.05);
+}
+
+.program-list i {
+  font: 2.5rem icons;
+  -webkit-text-stroke: 1px var(--bright-color);
+  background: linear-gradient(135deg, var(--bright-color) 52%, var(--dark-color) 52%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.program-list h3 {
+  min-width: 100px;
+  font-family: var(--title-font);
+}
+
+.program-link {
+  width: 80%;
+  display: block;
+  text-align: center;
+  font: 1.25rem/4rem var(--title-font);
+  margin: auto;
 }
