@@ -9,10 +9,11 @@
 }
 
 :root {
-  --accent-color: #ec5242;
+  --accent-color: #ed5342;
   --light-color: #d3d3d3;
   --dark-color: #272a31;
   --bright-color: #fff;
+  --text-color: #555;
   --title-font: bold, serif;
   --text-font: regular, serif;
 }
@@ -21,7 +22,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  color: var(--dark-color);
+  padding-top: 25px;
+  color: var(--text-color);
   font: 16px var(--text-font);
 }
 
@@ -158,4 +160,36 @@ button {
 
 .header-logo {
   display: none;
+}
+
+.hero {
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(211,211,211,0.1), rgba(211,211,211,0.9)), url(../images/hero.png);
+}
+
+.hero span {
+  font: 1.25rem var(--title-font);
+  -webkit-text-stroke: 0.5px var(--dark-color);
+}
+
+.hero h1 {
+  font: 3rem/2.75rem var(--title-font);
+  -webkit-text-stroke: 1px var(--dark-color);
+  background: repeating-linear-gradient(45deg, var(--accent-color) 0, rgb(60, 0, 0) 10%, var(--accent-color) 20%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hero p {
+  padding: 10px;
+  border: 3px solid var(--bright-color);
+  margin: 30px 0;
+}
+
+.hero time {
+  font: 1.5rem var(--title-font);
 }
