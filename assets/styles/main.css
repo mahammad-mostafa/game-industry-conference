@@ -114,14 +114,12 @@ button {
   bottom: 0;
   inset-inline: 0;
   display: none;
-  justify-content: flex-end;
-  flex-direction: column-reverse;
+  flex-direction: column;
   color: var(--bright-color);
   background-color: var(--dark-color);
 }
 
 .header-close {
-  order: 1;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -131,23 +129,7 @@ button {
   margin-inline-end: 10px;
 }
 
-.header-social {
-  order: 1;
-  gap: 20px;
-  font-size: 1.5rem;
-  justify-content: center;
-}
-
-.header-social li {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .header-links {
-  gap: 10px;
   flex-direction: column;
   font: 2rem var(--title-font);
   margin: 15px 0;
@@ -160,6 +142,30 @@ button {
 
 .header-logo {
   display: none;
+}
+
+.header-button {
+  width: 200px;
+  display: block;
+  font-size: 1.25rem;
+  padding: 10px;
+  text-align: center;
+  border: 5px solid var(--accent-color);
+  margin: auto;
+}
+
+.header-social {
+  gap: 20px;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+
+.header-social li {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero {
