@@ -1,3 +1,5 @@
+const headerMenu = document.querySelector('.header nav');
+const headerButton = document.querySelector('.header-menu');
 const speakersList = document.querySelector('.speakers-list');
 const speakers = [
   {
@@ -54,4 +56,12 @@ function fillSpeakers() {
   });
   speakersList.appendChild(fragment);
 }
+function toggleMenu() {
+  if (window.screen.width < 768) {
+    document.body.classList.toggle('scrolling');
+    headerMenu.classList.toggle('visibility');
+  }
+}
+headerMenu.addEventListener('click', toggleMenu);
+headerButton.addEventListener('click', toggleMenu);
 fillSpeakers();
