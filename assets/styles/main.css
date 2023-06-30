@@ -69,6 +69,10 @@ button {
   display: flex !important;
 }
 
+.scrolling {
+  overflow: hidden;
+}
+
 .accent-color {
   color: var(--accent-color);
 }
