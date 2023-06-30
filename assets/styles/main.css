@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding-top: 25px;
   color: var(--text-color);
-  font: 16px var(--text-font);
+  font: 12px var(--text-font);
 }
 
 h1,
@@ -100,6 +100,7 @@ button {
 .header {
   position: fixed;
   top: 0;
+  z-index: 1;
   inset-inline: 0;
   background-color: var(--bright-color);
   box-shadow: 0 0 3px var(--dark-color);
@@ -111,7 +112,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.25rem;
 }
 
 .header nav {
@@ -129,7 +130,7 @@ button {
   width: 50px;
   height: 50px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.25rem;
   align-self: flex-end;
   margin-top: 10px;
   margin-inline-end: 10px;
@@ -137,13 +138,13 @@ button {
 
 .header-links {
   flex-direction: column;
-  font: 2rem var(--title-font);
+  font: 2.25rem var(--title-font);
   margin: 15px 0;
 }
 
 .header-links li {
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.01);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .header-logo {
@@ -153,7 +154,7 @@ button {
 .header-button {
   width: 200px;
   display: block;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding: 10px;
   text-align: center;
   border: 5px solid var(--accent-color);
@@ -162,7 +163,7 @@ button {
 
 .header-social {
   gap: 20px;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   justify-content: center;
 }
 
@@ -183,13 +184,13 @@ button {
 }
 
 .hero span {
-  font: 1.25rem var(--title-font);
+  font: 1.5rem var(--title-font);
   -webkit-text-stroke: 0.5px var(--dark-color);
 }
 
 .hero h1 {
-  font: 3rem/2.75rem var(--title-font);
-  -webkit-text-stroke: 1px var(--dark-color);
+  font: 3.25rem/3rem var(--title-font);
+  -webkit-text-stroke: 1px var(--accent-color);
   background: repeating-linear-gradient(45deg, var(--accent-color) 0, rgb(60, 0, 0) 10%, var(--accent-color) 20%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -204,18 +205,19 @@ button {
 }
 
 .hero time {
-  font: 1.5rem var(--title-font);
+  font: 1.75rem var(--title-font);
 }
 
 .program {
   padding: 50px 0;
   background-position: center;
-  background-image: url(../images/pattern.png);
+  background-image: url(../images/program.png);
 }
 
-.program h2 {
-  font-size: 1.5rem;
+.program h2,
+.speakers h2 {
   text-align: center;
+  font: 2rem var(--title-font);
 }
 
 .program-list {
@@ -232,8 +234,8 @@ button {
   background-color: rgba(255,255,255,0.05);
 }
 
-.program-list i {
-  font: 2.5rem icons;
+.program-list span {
+  font: 2.75rem icons;
   -webkit-text-stroke: 1px var(--bright-color);
   background: linear-gradient(135deg, var(--bright-color) 52%, var(--dark-color) 52%);
   -webkit-text-fill-color: transparent;
@@ -242,7 +244,7 @@ button {
 }
 
 .program-list h3 {
-  min-width: 100px;
+  min-width: 80px;
   font-family: var(--title-font);
 }
 
@@ -250,6 +252,56 @@ button {
   width: 80%;
   display: block;
   text-align: center;
-  font: 1.25rem/4rem var(--title-font);
+  font: 1.5rem/4rem var(--title-font);
   margin: auto;
+}
+
+.speakers {
+  padding: 50px 0;
+}
+
+.speakers-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 100%;
+  margin: 50px 0;
+}
+
+.speakers-list article {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+  padding-inline-start: 15px;
+}
+
+.speakers-list span {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  inset-inline-start: 0;
+  background: repeating-linear-gradient(25deg, var(--bright-color) 1%, var(--light-color) 1%, var(--light-color) 2%, var(--bright-color) 2%, var(--bright-color) 3%);
+}
+
+.speakers-list img {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.speakers-list h3 {
+  font: 1.5rem var(--title-font);
+  margin-bottom: 10px;
+}
+
+.speakers-list i {
+  font-family: var(--title-font);
+}
+
+.speakers-list hr {
+  width: 25px;
+  border: 1px solid var(--light-color);
+  margin: 5px 0 10px;
 }
