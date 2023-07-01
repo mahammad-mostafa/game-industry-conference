@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(211, 211, 211, 0.1), rgba(211, 211, 211, 0.9)), url(../images/hero.png);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url(../images/hero.png);
 }
 
 .hero span {
@@ -12,13 +12,12 @@
 }
 
 .hero h1 {
-  font: 3.25rem/3rem var(--title-font);
+  font: 3.25rem var(--title-font);
   -webkit-text-stroke: 1px var(--accent-color);
   background: repeating-linear-gradient(45deg, var(--accent-color) 0, rgb(60, 0, 0) 10%, var(--accent-color) 20%);
   -webkit-text-fill-color: transparent;
   background-clip: initial;
   -webkit-background-clip: text;
-  margin-top: 10px;
 }
 
 .hero p {
@@ -167,4 +166,73 @@
 .partners img {
   height: 30px;
   filter: grayscale(100%) contrast(50%);
+}
+
+@media only screen and (min-width:768px) {
+  .hero {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)), url(../images/hero.png);
+  }
+  
+  .hero span {
+    font-size: 3rem;
+  }
+
+  .hero h1 {
+    max-width: 75%;
+    font-size: 6rem;
+  }
+
+  .hero p {
+    max-width: 50%;
+  }
+  
+  .hero time {
+    font-size: 2.25rem;
+  }
+
+  .hero div {
+    font-size: 1.25rem;
+  }
+
+  .program-list {
+    flex-direction: row;
+  }
+  
+  .program-list li {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .program-list span {
+    font-size: 3rem;
+  }
+
+  .program-list h3 {
+    font-size: 1.5rem;
+  }
+
+  .program-link {
+    width: 200px;
+    color: var(--bright-color);
+    text-decoration: underline;
+    background: none;
+  }
+
+  .speakers-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .speakers-list article {
+    display: flex;
+  }
+
+  .speakers button {
+    display: none;
+  }
+
+  .partners img:hover {
+    filter: none;
+  }
 }
