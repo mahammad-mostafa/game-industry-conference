@@ -1,3 +1,4 @@
+const headerBar = document.querySelector('.header');
 const headerMenu = document.querySelector('.header nav');
 const headerButton = document.querySelector('.header-menu');
 const speakersList = document.querySelector('.speakers-list');
@@ -41,6 +42,13 @@ const speakers = [
     description: 'John Hartwig is a Senior Member of the Technical Staff and is the CPU Team Lead in AMD\'s Game Engineering organization.',
   },
 ];
+function toggleHeader() {
+  if (window.scrollY <= 100 && headerBar.classList.contains('bright-background')) {
+    headerMenu.parentNode.classList.remove('bright-background');
+  } else if (window.scrollY > 100 && headerBar.classList.contains('bright-background') === false) {
+    headerMenu.parentNode.classList.add('bright-background');
+  }
+}
 function toggleMenu() {
   if (window.screen.width < 768) {
     document.body.classList.toggle('scrolling');
@@ -76,6 +84,7 @@ function fillSpeakers() {
     speakersButton.addEventListener('click', toggleList);
   }
 }
+window.addEventListener('scroll', toggleHeader);
 headerMenu.addEventListener('click', toggleMenu);
 headerButton.addEventListener('click', toggleMenu);
 fillSpeakers();
