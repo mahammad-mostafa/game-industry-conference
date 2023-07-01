@@ -23,7 +23,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  padding-top: 25px;
   color: var(--text-color);
   font: 12px var(--text-font);
 }
@@ -102,13 +101,15 @@ button {
   background-color: var(--dark-color);
 }
 
+.bright-background {
+  background-color: var(--bright-color);
+}
+
 .header {
   position: fixed;
   top: 0;
   z-index: 1;
   inset-inline: 0;
-  background-color: var(--bright-color);
-  box-shadow: 0 0 3px var(--dark-color);
 }
 
 .header-menu {
