@@ -180,6 +180,40 @@ button {
   justify-content: center;
 }
 
+.footer,
+.program,
+.speakers,
+.partners {
+  padding: 50px 0;
+}
+
+.footer-content,
+.footer-logo {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  gap: 5px;
+}
+
+.footer-icon {
+  width: 30px;
+  height: 30px;
+  font-size: 2rem;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: solid 3px var(--text-color);
+}
+
+.footer-text {
+  white-space: nowrap;
+  font: 1.5rem/1.25rem var(--title-font);
+}
+
 .hero {
   padding: 100px 0;
   background-size: cover;
@@ -214,7 +248,6 @@ button {
 }
 
 .program {
-  padding: 50px 0;
   background-position: center;
   background-image: url(../images/program.png);
 }
@@ -260,10 +293,6 @@ button {
   text-align: center;
   font: 1.5rem/4rem var(--title-font);
   margin: auto;
-}
-
-.speakers {
-  padding: 50px 0;
 }
 
 .speakers-list {
@@ -338,18 +367,14 @@ button {
   transform: rotateZ(-90deg);
 }
 
-.partners {
-  padding: 50px 0;
-}
-
 .partners ul {
   gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 50px 0;
+  margin-top: 50px;
 }
 
 .partners img {
-  height: 40px;
+  height: 30px;
   filter: grayscale(100%) contrast(50%);
 }
