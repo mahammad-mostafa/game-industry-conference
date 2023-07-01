@@ -1,6 +1,7 @@
 const headerMenu = document.querySelector('.header nav');
 const headerButton = document.querySelector('.header-menu');
 const speakersList = document.querySelector('.speakers-list');
+const speakersButton = document.querySelector('.speakers button');
 const speakers = [
   {
     image: 'assets/images/speakers/wesley.jpg',
@@ -40,21 +41,23 @@ const speakers = [
   },
 ];
 function fillSpeakers() {
-  const fragment = new DocumentFragment();
-  speakers.forEach((speaker) => {
-    const article = document.createElement('article');
-    let articelHtml = '<span></span>';
-    articelHtml += `<img src="${speaker.image}" alt="${speaker.name}" />`;
-    articelHtml += '<div>';
-    articelHtml += `<h3 class="dark-color">${speaker.name}</h3>`;
-    articelHtml += `<i class="accent-color">${speaker.company}</i>`;
-    articelHtml += '<hr />';
-    articelHtml += `<p>${speaker.description}</p>`;
-    articelHtml += '</div>';
-    article.innerHTML = articelHtml;
-    fragment.appendChild(article);
-  });
-  speakersList.appendChild(fragment);
+  if (speakersList !== null) {
+    const fragment = new DocumentFragment();
+    speakers.forEach((speaker) => {
+      const article = document.createElement('article');
+      let articelHtml = '<span></span>';
+      articelHtml += `<img src="${speaker.image}" alt="${speaker.name}" />`;
+      articelHtml += '<div>';
+      articelHtml += `<h3 class="dark-color">${speaker.name}</h3>`;
+      articelHtml += `<i class="accent-color">${speaker.company}</i>`;
+      articelHtml += '<hr />';
+      articelHtml += `<p>${speaker.description}</p>`;
+      articelHtml += '</div>';
+      article.innerHTML = articelHtml;
+      fragment.appendChild(article);
+    });
+    speakersList.appendChild(fragment);
+  }
 }
 function toggleMenu() {
   if (window.screen.width < 768) {
@@ -62,6 +65,16 @@ function toggleMenu() {
     headerMenu.classList.toggle('visibility');
   }
 }
+function toggleList() {
+  if (speakersList.classList.contains('speakers-list-all')) {
+    speakersButton.firstElementChild.textContent = 'MORE';
+  } else {
+    speakersButton.firstElementChild.textContent = 'LESS';
+  }
+  speakersList.classList.toggle('speakers-list-all');
+  speakersButton.lastChild.classList.toggle('speakers-icon-flip');
+}
 headerMenu.addEventListener('click', toggleMenu);
 headerButton.addEventListener('click', toggleMenu);
+speakersButton.addEventListener('click', toggleList);
 fillSpeakers();
