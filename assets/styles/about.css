@@ -119,10 +119,10 @@
 }
 
 .history-list time {
-  font: 4rem var(--title-font)
+  font: 4rem var(--title-font);
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   .hero span {
     display: none;
   }
@@ -137,12 +137,11 @@
     max-width: 75%;
     font-size: 6rem;
   }
-  
+
   .hero p {
     max-width: 60%;
-    
   }
-  
+
   .identity-logo {
     width: 500px;
   }

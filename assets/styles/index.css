@@ -168,11 +168,11 @@
   filter: grayscale(100%) contrast(50%);
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)), url(../images/hero.png);
   }
-  
+
   .hero span {
     font-size: 3rem;
   }
@@ -185,7 +185,7 @@
   .hero p {
     max-width: 50%;
   }
-  
+
   .hero time {
     font-size: 2.25rem;
   }
@@ -197,7 +197,7 @@
   .program-list {
     flex-direction: row;
   }
-  
+
   .program-list li {
     width: 100%;
     padding: 20px;
