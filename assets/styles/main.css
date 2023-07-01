@@ -220,7 +220,8 @@ button {
 }
 
 .program h2,
-.speakers h2 {
+.speakers h2,
+.partners h2 {
   text-align: center;
   font: 2rem var(--title-font);
 }
@@ -335,4 +336,20 @@ button {
 
 .speakers-icon-flip {
   transform: rotateZ(-90deg);
+}
+
+.partners {
+  padding: 50px 0;
+}
+
+.partners ul {
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.partners img {
+  height: 40px;
+  filter: grayscale(100%) contrast(50%);
 }
