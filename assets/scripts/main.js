@@ -41,6 +41,21 @@ const speakers = [
     description: 'John Hartwig is a Senior Member of the Technical Staff and is the CPU Team Lead in AMD\'s Game Engineering organization.',
   },
 ];
+function toggleMenu() {
+  if (window.screen.width < 768) {
+    document.body.classList.toggle('scrolling');
+    headerMenu.classList.toggle('visibility');
+  }
+}
+function toggleList() {
+  if (speakersList.classList.contains('speakers-list-all')) {
+    speakersButtonContent[0].textContent = 'MORE';
+  } else {
+    speakersButtonContent[0].textContent = 'LESS';
+  }
+  speakersList.classList.toggle('speakers-list-all');
+  speakersButtonContent[1].classList.toggle('speakers-icon-flip');
+}
 function fillSpeakers() {
   if (speakersList !== null) {
     const fragment = new DocumentFragment();
@@ -58,24 +73,9 @@ function fillSpeakers() {
       fragment.appendChild(article);
     });
     speakersList.appendChild(fragment);
+    speakersButton.addEventListener('click', toggleList);
   }
-}
-function toggleMenu() {
-  if (window.screen.width < 768) {
-    document.body.classList.toggle('scrolling');
-    headerMenu.classList.toggle('visibility');
-  }
-}
-function toggleList() {
-  if (speakersList.classList.contains('speakers-list-all')) {
-    speakersButtonContent[0].textContent = 'MORE';
-  } else {
-    speakersButtonContent[0].textContent = 'LESS';
-  }
-  speakersList.classList.toggle('speakers-list-all');
-  speakersButtonContent[1].classList.toggle('speakers-icon-flip');
 }
 headerMenu.addEventListener('click', toggleMenu);
 headerButton.addEventListener('click', toggleMenu);
-speakersButton.addEventListener('click', toggleList);
 fillSpeakers();
