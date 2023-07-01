@@ -21,7 +21,7 @@
 .hero p {
   padding: 10px;
   background-color: var(--bright-color);
-  border: 1px solid var(--text-color);
+  box-shadow: 0 0 1px var(--dark-color);
   margin: 30px 0;
 }
 
