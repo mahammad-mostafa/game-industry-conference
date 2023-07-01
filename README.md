@@ -32,7 +32,7 @@ It also includes some config linters for (`HTML` / `CSS3` / `JavaScript`) in the
 
 📌 **Live Demo:**
 - See the project live from [here](https://mahammad-mostafa.github.io/game-industry-conference-site).
-- Check a screen recording to showcase the project from [here]().
+- Check a screen recording to showcase the project from [here](https://www.loom.com/share/7f48ff3133ee408e9e0eadaef7176932?sid=fb3f639e-0d29-454d-b1d7-8764f453f2bb).
 
 📌 **Tech Stack:**
 - Page strucutre is built with `HTML5`
@@ -44,9 +44,8 @@ It also includes some config linters for (`HTML` / `CSS3` / `JavaScript`) in the
 - Responsive design on all screens
 - Icons in webfont format for sharp visuals
 - Hover effect on every link and icon
-- Animation on hero section heading
-- Toolbar with logo and menu button
 - Toggling hamburger mobile menu
+- Dynamic loading of speakers section in home page
 
 <p align="right"><a href="#title">back to top</a></p>
 
@@ -65,7 +64,7 @@ You can easily download or fork this repository and work on it immadiately!
 - Simply download or fork this repository.
 
 📌 **Deployment:**
-- You can deploy this project by uploading three files (`index.html` / `style.css` / `script.js`) to a live server.
+- You can deploy this project by uploading two files (`index.html` / `about.html`) and `assets` folder to a live server.
 
 <p align="right"><a href="#title">back to top</a></p>
 
