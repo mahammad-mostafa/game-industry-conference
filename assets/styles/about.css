@@ -13,7 +13,7 @@
 }
 
 .hero h1 {
-  font: 3.25rem/3rem var(--title-font);
+  font: 3.25rem var(--title-font);
   -webkit-text-stroke: 0.5px var(--dark-color);
   margin-top: 10px;
 }
@@ -26,7 +26,7 @@
 }
 
 .hero a {
-  display: block;
+  display: inline-block;
   font-family: var(--title-font);
   text-decoration: underline;
   margin-top: 5px;
@@ -96,7 +96,7 @@
   margin: 50px 0;
 }
 
-.history-list article {
+.history-list a {
   position: relative;
 }
 
@@ -119,5 +119,35 @@
 }
 
 .history-list time {
-  font: 2.5rem var(--title-font)
+  font: 4rem var(--title-font)
+}
+
+@media only screen and (min-width:768px) {
+  .hero span {
+    display: none;
+  }
+
+  .hero h1,
+  .hero p,
+  .identity-logo {
+    margin-inline: auto;
+  }
+
+  .hero h1 {
+    max-width: 75%;
+    font-size: 6rem;
+  }
+  
+  .hero p {
+    max-width: 60%;
+    
+  }
+  
+  .identity-logo {
+    width: 500px;
+  }
+
+  .history-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
