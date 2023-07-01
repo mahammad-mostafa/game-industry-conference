@@ -2,6 +2,7 @@ const headerMenu = document.querySelector('.header nav');
 const headerButton = document.querySelector('.header-menu');
 const speakersList = document.querySelector('.speakers-list');
 const speakersButton = document.querySelector('.speakers button');
+const speakersButtonContent = document.querySelectorAll('.speakers button span');
 const speakers = [
   {
     image: 'assets/images/speakers/wesley.jpg',
@@ -67,12 +68,12 @@ function toggleMenu() {
 }
 function toggleList() {
   if (speakersList.classList.contains('speakers-list-all')) {
-    speakersButton.firstElementChild.textContent = 'MORE';
+    speakersButtonContent[0].textContent = 'MORE';
   } else {
-    speakersButton.firstElementChild.textContent = 'LESS';
+    speakersButtonContent[0].textContent = 'LESS';
   }
   speakersList.classList.toggle('speakers-list-all');
-  speakersButton.lastChild.classList.toggle('speakers-icon-flip');
+  speakersButtonContent[1].classList.toggle('speakers-icon-flip');
 }
 headerMenu.addEventListener('click', toggleMenu);
 headerButton.addEventListener('click', toggleMenu);
