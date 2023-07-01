@@ -211,3 +211,94 @@ button {
   white-space: nowrap;
   font: 1.5rem/1.25rem var(--title-font);
 }
+
+@media only screen and (min-width:768px)  {
+  body {
+    padding-top: 80px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .header-menu,
+  .header-close {
+    display: none;
+  }
+
+  .header {
+    background-color: var(--bright-color);
+    box-shadow: 0 0 1px var(--dark-color);
+  }
+
+  .header nav {
+    position: static;
+    display: flex;
+    flex-direction: column-reverse;
+    color: var(--text-color);
+    background: none;
+  }
+
+  .header-links {
+    width: 100%;
+    gap: 60px;
+    font-size: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+  }
+
+  .header-logo {
+    display: block;
+    font-size: 2rem;
+    margin-inline-end: auto;
+  }
+
+  .header-logo a {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-logo .icon-logo {
+    padding: 5px;
+    font-size: 1.75rem;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    margin-inline-end: 5px;
+  }
+
+  .header div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-title {
+    font: 1.5rem/1.25rem var(--title-font);
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.15px;
+  }
+
+  .header-button {
+    width: auto;
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .header-social {
+    width: 100%;
+    gap: 10px;
+    font-size: 1.25rem;
+    justify-content: flex-end;
+    box-sizing: border-box;
+  }
+
+  .header-social li {
+    width: 30px;
+    height: 30px;
+  }
+}
