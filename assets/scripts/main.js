@@ -43,10 +43,12 @@ const speakers = [
   },
 ];
 function toggleHeader() {
-  if (window.scrollY <= 100 && headerBar.classList.contains('bright-background')) {
-    headerMenu.parentNode.classList.remove('bright-background');
-  } else if (window.scrollY > 100 && headerBar.classList.contains('bright-background') === false) {
-    headerMenu.parentNode.classList.add('bright-background');
+  if (window.screen.width < 768) {
+    if (window.scrollY <= 100 && headerBar.classList.contains('bright-background')) {
+      headerMenu.parentNode.classList.remove('bright-background');
+    } else if (window.scrollY > 100 && headerBar.classList.contains('bright-background') === false) {
+      headerMenu.parentNode.classList.add('bright-background');
+    }
   }
 }
 function toggleMenu() {
