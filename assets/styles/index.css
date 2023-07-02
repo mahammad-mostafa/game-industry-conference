@@ -1,0 +1,238 @@
+.hero {
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url(../images/hero.png);
+}
+
+.hero span {
+  font: 1.5rem var(--title-font);
+  -webkit-text-stroke: 0.5px var(--dark-color);
+}
+
+.hero h1 {
+  font: 3.25rem var(--title-font);
+  -webkit-text-stroke: 1px var(--accent-color);
+  background: repeating-linear-gradient(45deg, var(--accent-color) 0, rgb(60, 0, 0) 10%, var(--accent-color) 20%);
+  -webkit-text-fill-color: transparent;
+  background-clip: initial;
+  -webkit-background-clip: text;
+}
+
+.hero p {
+  padding: 10px;
+  border: 3px solid var(--bright-color);
+  margin: 30px 0;
+}
+
+.hero time {
+  font: 1.75rem var(--title-font);
+}
+
+.program,
+.speakers,
+.partners {
+  padding: 50px 0;
+}
+
+.program {
+  background-position: center;
+  background-image: url(../images/program.png);
+}
+
+.program h2,
+.speakers h2,
+.partners h2 {
+  text-align: center;
+  font: 2rem var(--title-font);
+}
+
+.program-list {
+  gap: 5px;
+  flex-direction: column;
+  margin: 40px 0;
+}
+
+.program-list li {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.program-list span {
+  font: 2.75rem var(--icons-font);
+  -webkit-text-stroke: 1px var(--bright-color);
+  background: linear-gradient(135deg, var(--bright-color) 52%, var(--dark-color) 52%);
+  -webkit-text-fill-color: transparent;
+  background-clip: initial;
+  -webkit-background-clip: text;
+}
+
+.program-list h3 {
+  min-width: 80px;
+  font-family: var(--title-font);
+}
+
+.program-link {
+  width: 80%;
+  display: block;
+  text-align: center;
+  font: 1.5rem/4rem var(--title-font);
+  margin: auto;
+}
+
+.speakers-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 100%;
+  margin: 50px 0;
+}
+
+.speakers-list article {
+  position: relative;
+  display: none;
+  gap: 20px;
+  padding-top: 15px;
+  padding-inline-start: 15px;
+}
+
+.speakers-list-all article,
+.speakers-list article:nth-child(1),
+.speakers-list article:nth-child(2) {
+  display: flex;
+}
+
+.speakers-list span {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  inset-inline-start: 0;
+  background: repeating-linear-gradient(25deg, var(--bright-color) 1%, var(--light-color) 1%, var(--light-color) 2%, var(--bright-color) 2%, var(--bright-color) 3%);
+}
+
+.speakers-list img {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.speakers-list h3 {
+  font: 1.5rem var(--title-font);
+  margin-bottom: 10px;
+}
+
+.speakers-list i {
+  font-family: var(--title-font);
+}
+
+.speakers-list hr {
+  width: 25px;
+  border: 1px solid var(--light-color);
+  margin: 5px 0 10px;
+}
+
+.speakers button {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  border-radius: 3px;
+  border: 1px solid var(--light-color);
+}
+
+.speakers-icon {
+  transform: rotateZ(90deg);
+}
+
+.speakers-icon-flip {
+  transform: rotateZ(-90deg);
+}
+
+.partners ul {
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.partners img {
+  height: 30px;
+  filter: grayscale(100%) contrast(50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)), url(../images/hero.png);
+  }
+
+  .hero span {
+    font-size: 3rem;
+  }
+
+  .hero h1 {
+    max-width: 75%;
+    font-size: 6rem;
+  }
+
+  .hero p {
+    max-width: 50%;
+  }
+
+  .hero time {
+    font-size: 2.25rem;
+  }
+
+  .hero div {
+    font-size: 1.25rem;
+  }
+
+  .program-list {
+    flex-direction: row;
+  }
+
+  .program-list li {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .program-list span {
+    font-size: 3rem;
+  }
+
+  .program-list h3 {
+    font-size: 1.5rem;
+  }
+
+  .program-link {
+    width: 200px;
+    color: var(--bright-color);
+    text-decoration: underline;
+    background: none;
+  }
+
+  .speakers-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .speakers-list article {
+    display: flex;
+  }
+
+  .speakers button {
+    display: none;
+  }
+
+  .partners img:hover {
+    filter: none;
+  }
+}

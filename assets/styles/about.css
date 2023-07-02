@@ -1,0 +1,152 @@
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(211, 211, 211, 0.75), rgba(211, 211, 211, 1)), url(../images/hero.png);
+}
+
+.hero span {
+  font: 1.5rem var(--title-font);
+  -webkit-text-stroke: 0.5px var(--dark-color);
+}
+
+.hero h1 {
+  font: 3.25rem var(--title-font);
+  -webkit-text-stroke: 0.5px var(--dark-color);
+  margin-top: 10px;
+}
+
+.hero p {
+  padding: 10px;
+  background-color: var(--bright-color);
+  box-shadow: 0 0 1px var(--dark-color);
+  margin: 30px 0;
+}
+
+.hero a {
+  display: inline-block;
+  font-family: var(--title-font);
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+.identity,
+.history {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.identity {
+  border-bottom: 1px solid var(--light-color);
+}
+
+.identity h2,
+.history h2 {
+  font: 2rem var(--title-font);
+}
+
+.identity-logo {
+  display: flex;
+  gap: 5px;
+  padding: 25px 0;
+  align-items: flex-start;
+  justify-content: center;
+  border: solid 1px var(--light-color);
+  margin-top: 25px;
+}
+
+.identity-icon {
+  width: 50px;
+  height: 50px;
+  font-size: 3rem;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  border: solid 5px currentColor;
+}
+
+.identity-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.identity-text h3 {
+  font: 3.5rem/3.25rem var(--title-font);
+}
+
+.identity-text span {
+  letter-spacing: 1px;
+  font: 2.25rem/2rem var(--title-font);
+}
+
+.identity-text p {
+  font-size: 0.75rem;
+  letter-spacing: 0.15px;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  margin-top: 5px;
+}
+
+.history-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 100%;
+  margin: 50px 0;
+}
+
+.history-list a {
+  position: relative;
+}
+
+.history-list img {
+  display: block;
+  width: 100%;
+}
+
+.history-list div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  inset-inline: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(237, 83, 66, 0.5);
+}
+
+.history-list time {
+  font: 4rem var(--title-font);
+}
+
+@media only screen and (min-width: 768px) {
+  .hero span {
+    display: none;
+  }
+
+  .hero h1,
+  .hero p,
+  .identity-logo {
+    margin-inline: auto;
+  }
+
+  .hero h1 {
+    max-width: 75%;
+    font-size: 6rem;
+  }
+
+  .hero p {
+    max-width: 60%;
+  }
+
+  .identity-logo {
+    width: 500px;
+  }
+
+  .history-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
