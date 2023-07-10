@@ -6,7 +6,7 @@
 
 This is the capstone project in the first module in the **Microverse** program.
 <br/>
-Check the below contents for futher details about this project.
+Check the below contents for further details about this project.
 
 <!-- CONTENTS -->
 
