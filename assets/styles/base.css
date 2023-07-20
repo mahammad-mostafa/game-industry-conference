@@ -220,6 +220,7 @@ button {
 
   a:hover {
     color: var(--accent-color);
+    border-color: var(--accent-color);
   }
 
   .container {
@@ -272,6 +273,7 @@ button {
     border-radius: 50%;
     border: 2px solid currentColor;
     margin-inline-end: 5px;
+    transition: all 0.1s ease;
   }
 
   .header div {
