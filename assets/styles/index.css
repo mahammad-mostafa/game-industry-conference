@@ -49,7 +49,7 @@
 }
 
 .program-list {
-  gap: 5px;
+  gap: 4px;
   flex-direction: column;
   margin: 40px 0;
 }
@@ -203,6 +203,7 @@
     padding: 20px;
     text-align: center;
     flex-direction: column;
+    border: 2px solid transparent;
   }
 
   .program-list span {
@@ -230,6 +231,10 @@
 
   .speakers button {
     display: none;
+  }
+
+  .program-list li:hover {
+    border-color: var(--bright-color);
   }
 
   .partners img:hover {
