@@ -2,7 +2,7 @@
 
 <!-- TITLE -->
 
-# 🏷️ Game Industry Conference Site
+# 🏷️ Game Industry Conference
 
 This is the capstone project in the first module in the **Microverse** program.
 <br/>
