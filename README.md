@@ -31,7 +31,7 @@ This project is about building a game industry conference website. It contains f
 It also includes some config linters for (`HTML` / `CSS3` / `JavaScript`) in the `.github` folder. 
 
 📌 **Live Demo:**
-- See the project live from [here](https://mahammad-mostafa.github.io/game-industry-conference-site).
+- See the project live from [here](https://mahammad-mostafa.github.io/game-industry-conference).
 - Check a screen recording to showcase the project from [here](https://www.loom.com/share/7f48ff3133ee408e9e0eadaef7176932?sid=fb3f639e-0d29-454d-b1d7-8764f453f2bb).
 
 📌 **Tech Stack:**
